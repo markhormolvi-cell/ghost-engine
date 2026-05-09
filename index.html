@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARKHOR GHOST MODE | Elite Stealth Network</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3131;
+            --primary-glow: rgba(255, 49, 49, 0.4);
+            --bg-dark: #000000;
+            --whatsapp: #25d366;
+            --text-main: #ffffff;
+            --text-dim: #999999;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a0505 0%, #000000 100%);
+            z-index: -1;
+        }
+
+        .glow-sphere {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.1;
+            border-radius: 50%;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-10%, -10%) scale(1); }
+            100% { transform: translate(20%, 10%) scale(1.2); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 10vw, 90px);
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: -2px;
+            background: linear-gradient(to bottom, #fff 0%, #999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-main {
+            padding: 22px 60px;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 20px;
+            border-radius: 60px;
+            box-shadow: 0 10px 40px var(--primary-glow);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 60px var(--primary-glow);
+        }
+
+        footer {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .whatsapp-contact {
+            background: #075e54;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 30px;
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .whatsapp-contact:hover {
+            background: var(--whatsapp);
+            transform: scale(1.05);
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .reveal {
+            animation: revealUp 1s ease forwards;
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hero-bg">
+        <div class="glow-sphere" style="top: 10%; left: 10%;"></div>
+        <div class="glow-sphere" style="bottom: 10%; right: 10%; background: #441111;"></div>
+    </div>
+
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">MARKHOR GHOST</a>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="https://wa.me/923194949103" target="_blank" style="color: #fff; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 1px; border: 1px solid var(--primary); padding: 8px 15px; border-radius: 8px; transition: 0.3s; display: flex; align-items: center; gap: 8px; background: rgba(255,49,49,0.1);">
+                    <svg width="16" height="16" viewBox="0 0 448 512" fill="var(--primary)"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    WHATSAPP ADMIN
+                </a>
+                <div class="copyright" style="margin-top: 0; color: #444;">V2.0 STABLE</div>
+            </div>
+        </nav>
+
+        <section class="hero reveal">
+            <h1>VANISH FROM THE GRID.</h1>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
+                <!-- MAIN BUTTON -->
+                <a href="MARKHOR-GHOST.zip" class="btn-main">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    INSTALL GHOST ENGINE
+                </a>
+
+                <!-- OPTIONAL BOT SECTION -->
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="font-size: 10px; color: var(--primary); letter-spacing: 2px; font-weight: 800; text-transform: uppercase; animation: pulse-red 2s infinite;">
+                        Hamara Auto Listing Bot bhi try krein! 🔥
+                    </div>
+                    <a href="https://markhor-fb-auto-listing-bot.vercel.app/" target="_blank" style="padding: 12px 30px; border: 1px solid #222; border-radius: 50px; color: #888; text-decoration: none; font-size: 13px; font-weight: 600; transition: 0.3s; background: rgba(255,255,255,0.02);">
+                        OPEN FB AUTO LISTING BOT
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            @keyframes pulse-red { 0%, 100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+        </style>
+
+        <footer>
+            <div class="reveal" style="animation-delay: 0.2s;">
+                <a href="https://wa.me/923194949103" target="_blank" class="whatsapp-contact">
+                    <svg width="20" height="20" viewBox="0 0 448 512" fill="white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    CONTACT VIA WHATSAPP
+                </a>
+                <div class="copyright">© 2026 MARKHOR GHOST MODE. ALL RIGHTS RESERVED.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
